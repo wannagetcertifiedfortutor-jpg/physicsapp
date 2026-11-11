@@ -1,0 +1,4 @@
+# The site is prebuilt; Netlify only publishes these files.
+[build]
+  publish = "."
+  command = ""

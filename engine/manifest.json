@@ -1,0 +1,20 @@
+{
+ "pyodide": "0.27.7",
+ "stdlib": "engine/python_stdlib.b64.txt",
+ "wheels": [
+  {
+   "name": "mpmath",
+   "file": "engine/wheels/mpmath-1.3.0-py3-none-any.b64.txt"
+  },
+  {
+   "name": "sympy",
+   "file": "engine/wheels/sympy-1.13.3-py3-none-any.b64.txt"
+  },
+  {
+   "name": "antlr4-python3-runtime",
+   "file": "engine/wheels/antlr4_python3_runtime-4.11.0-py3-none-any.b64.txt"
+  }
+ ],
+ "app": "engine/app.b64.txt",
+ "app_sha256": "2e5201d610a5c1ba"
+}

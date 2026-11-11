@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ilovephysics.blog/sitemap.xml

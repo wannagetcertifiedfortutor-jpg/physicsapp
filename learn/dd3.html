@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Dive: Gyroscopes | Classical Mechanics practice</title>
+<meta name="description" content="Gyroscopic precession (enrichment).">
+<link rel="stylesheet" href="../learn/katex.min.css">
+<style>
+:root{--bg:#fbfaf7;--ink:#1d2433;--muted:#5b6475;--line:#e3e0d8;--accent:#1f5fbf;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141922;--ink:#e6e9ef;--muted:#a3abba;--line:#2b3343;--accent:#7fb0ff;--card:#1b212c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,'Iowan Old Style',serif}
+main{max-width:760px;margin:0 auto;padding:28px 16px 64px}
+header.site{border-bottom:1px solid var(--line);padding:12px 16px;font:600 15px system-ui,sans-serif}
+header.site a{color:var(--ink);text-decoration:none}header.site nav{float:right;font-weight:400}
+header.site nav a{color:var(--accent);margin-left:14px}
+h1{font-size:30px;line-height:1.2;margin:8px 0 6px}h2{font-size:21px;margin:34px 0 8px}h3{font-size:17px;margin:20px 0 4px;font-family:system-ui,sans-serif}
+a{color:var(--accent)}.muted{color:var(--muted)}.small{font-size:14px}
+.problem{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0}
+.problem .tag{font:600 12px system-ui,sans-serif;color:var(--muted);margin-bottom:4px}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:9px 16px;border-radius:6px;text-decoration:none;font:600 15px system-ui,sans-serif}
+@media (prefers-color-scheme:dark){.cta{color:#0b1220}}
+ul.lessons{padding-left:20px}ul.lessons li{margin:6px 0}
+.katex{font-size:1.02em}
+</style></head>
+<body><header class="site"><a href="../">8.01SC Practice</a><nav><a href="../learn/">Course outline</a><a href="../">Practice app</a></nav></header>
+<main><p class="muted small">Week 12: Rotations and Translation - Rolling</p><h1>Deep Dive: Gyroscopes</h1>
+<p>Gyroscopic precession (enrichment).</p>
+<p class="small">Lecture videos and notes: <a href="https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-12-rotations-and-translation-rolling/dd-3-1-gyroscopes-1-free-body-diagrams-torque-and-rotating-vectors/">MIT OpenCourseWare 8.01SC</a></p>
+<p><a class="cta" href="../">Practice this lesson</a></p>
+<h2>Gyroscopic precession</h2><p>Derive the precession rate from τ = dL/dt for a spinning top.</p>
+<div class="problem"><div class="tag">Sample problem · AP Multiple Choice</div><p>A gyroscope&#x27;s axle points horizontally <strong>away</strong> from its pivot along <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal">x</span></span></span></span>, and the flywheel spins so that its angular momentum <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.9663em;"></span><span class="mord katex-accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9663em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">L</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2077em;"><span class="katex-overlay" style="height:0.714em;width:0.471em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span></span></span></span> also points along <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal">x</span></span></span></span>. Gravity acts along <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.044em;">z</span></span></span></span> (down). In which direction does the free end of the axle start to move?</p><ol type="A"><li>Toward <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span></span></span></span>: the axle precesses horizontally, clockwise seen from above.</li><li>Toward <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.044em;">z</span></span></span></span>: the free end rises.</li><li>Toward <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.044em;">z</span></span></span></span>: the free end falls.</li><li>Toward <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span></span></span></span>: the axle precesses horizontally, counter-clockwise seen from above.</li></ol></div>
+<div class="problem"><div class="tag">Sample problem · AP Multiple Choice</div><p>A spinning gyroscope is supported at one end of its axle, which is horizontal, and it precesses slowly about a vertical axis. The gyroscope is spun up again so that its spin angular speed is doubled, with everything else unchanged. What happens to the angular speed of precession?</p><ol type="A"><li>It is unchanged.</li><li>It is divided by 4.</li><li>It is multiplied by 2.</li><li>It is divided by 2.</li></ol></div>
+<p class="small muted">Answers, hints and step-by-step solutions are in the practice app.</p></main></body></html>
