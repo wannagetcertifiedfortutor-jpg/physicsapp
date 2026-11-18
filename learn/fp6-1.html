@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.1 Moment of Inertia | Classical Mechanics practice</title>
+<meta name="description" content="Moment of inertia of particles and rigid objects, derivations by integration, and the parallel axis theorem.">
+<link rel="stylesheet" href="../learn/katex.min.css">
+<style>
+:root{--bg:#fbfaf7;--ink:#1d2433;--muted:#5b6475;--line:#e3e0d8;--accent:#1f5fbf;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141922;--ink:#e6e9ef;--muted:#a3abba;--line:#2b3343;--accent:#7fb0ff;--card:#1b212c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,'Iowan Old Style',serif}
+main{max-width:760px;margin:0 auto;padding:28px 16px 64px}
+header.site{border-bottom:1px solid var(--line);padding:12px 16px;font:600 15px system-ui,sans-serif}
+header.site a{color:var(--ink);text-decoration:none}header.site nav{float:right;font-weight:400}
+header.site nav a{color:var(--accent);margin-left:14px}
+h1{font-size:30px;line-height:1.2;margin:8px 0 6px}h2{font-size:21px;margin:34px 0 8px}h3{font-size:17px;margin:20px 0 4px;font-family:system-ui,sans-serif}
+a{color:var(--accent)}.muted{color:var(--muted)}.small{font-size:14px}
+.problem{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:10px 0}
+.problem .tag{font:600 12px system-ui,sans-serif;color:var(--muted);margin-bottom:4px}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:9px 16px;border-radius:6px;text-decoration:none;font:600 15px system-ui,sans-serif}
+@media (prefers-color-scheme:dark){.cta{color:#0b1220}}
+ul.lessons{padding-left:20px}ul.lessons li{margin:6px 0}
+.katex{font-size:1.02em}
+</style></head>
+<body><header class="site"><a href="../">AP Physics C Practice</a><nav><a href="../learn/">Course outline</a><a href="../">Practice app</a></nav></header>
+<main><p class="muted small">Unit 6: Rotational Dynamics</p><h1>6.1 Moment of Inertia</h1>
+<p>Moment of inertia of particles and rigid objects, derivations by integration, and the parallel axis theorem.</p>
+<p class="small muted">AP topics: 5.4 Rotational Inertia</p>
+<p><a class="cta" href="../">Practice this lesson</a></p>
+<h2>Learn this topic</h2>
+<h3>Moment of inertia</h3><ul><li><a href="https://www.flippingphysics.com/moment-of-inertia.html">Moment of Inertia Introduction and Rotational Kinetic Energy Derivation</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/moment-of-inertia-problem.html">Introductory Moment of Inertia and Rotational Kinetic Energy Problem</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/moment-of-inertia-rigid-objects.html">Moments of Inertia of Rigid Objects with Shape</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/thin-rod-rotational-inertia.html">Using Integrals to Derive Rotational Inertia of a Long, Thin Rod with Demonstration</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/rotational-inertia-thin-hoop.html">Uniform Thin Hoop Rotational Inertia Derivation</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/parallel-axis-theorem.html">Parallel Axis Theorem Derivation</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/parallel-axis-theorem-example.html">Parallel Axis Theorem Example</a> (Flipping Physics)</li></ul>
+<h3>Unit review</h3><ul><li><a href="https://www.flippingphysics.com/apc-rotational-dynamics-1-review.html">AP Physics C: Rotational Dynamics Review (1 of 2)</a> (Flipping Physics)</li><li><a href="https://www.flippingphysics.com/apc-rotational-dynamics-2-review.html">AP Physics C: Rotational Dynamics Review (2 of 2)</a> (Flipping Physics)</li></ul>
+<h2>Moment of inertia</h2><p>Compute I for discrete and continuous bodies by integration; apply the parallel-axis theorem.</p>
+<div class="problem"><div class="tag">Sample problem · AP Free Response · Calculate</div><p>Three small <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">0.5</span></span></span></span> kg beads are fixed to a light rod of length <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> m: one at each end and one at the midpoint. Find the moment of inertia of the beads about an axis perpendicular to the rod through the middle mass.</p></div>
+<div class="problem"><div class="tag">Sample problem · AP Multiple Choice</div><p>A solid disk and a thin ring have the same mass <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">M</span></span></span></span> and the same radius <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0077em;">R</span></span></span></span>. Both spin about their symmetry axes at the same <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">ω</span></span></span></span>. Which is true?</p><ol type="A"><li>The disk has the larger moment of inertia because it contains more material.</li><li>The ring has twice the moment of inertia but the same kinetic energy, since <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">ω</span></span></span></span> is the same.</li><li>They have the same moment of inertia because mass and radius are equal.</li><li>The ring has twice the moment of inertia and twice the rotational kinetic energy of the disk.</li></ol></div>
+<p class="small muted">Answers, hints and step-by-step solutions are in the practice app.</p></main></body></html>
